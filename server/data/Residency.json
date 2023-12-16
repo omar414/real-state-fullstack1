@@ -218,7 +218,7 @@
       "city": "Lahore",
       "country": "Pakistan",
       "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1683804284/jlap7xq7owdsfb4tlsyt.png",
-      "facilities": { "bedrooms": 12, "parkings": 2, "bathrooms": 3 },
+      "facilities": { "bedrooms": 12, "parking": 2, "bathrooms": 3 },
       "userEmail": "ahmadrao925@gmail.com",
       "createdAt": { "$date": "2023-05-11T11:26:15.44Z" },
       "updatedAt": { "$date": "2023-05-11T11:26:15.44Z" }
@@ -232,7 +232,7 @@
       "city": "New York",
       "country": "United States",
       "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1683892030/eb99xugad9w3pswx7h3f.jpg",
-      "facilities": { "bedrooms": 2, "parkings": 3, "bathrooms": 2 },
+      "facilities": { "bedrooms": 2, "parking": 3, "bathrooms": 2 },
       "userEmail": "zain@gaintime.io",
       "createdAt": { "$date": "2023-05-12T11:48:35.028Z" },
       "updatedAt": { "$date": "2023-05-12T11:48:35.028Z" }
@@ -246,7 +246,7 @@
       "city": "Delhi",
       "country": "India",
       "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1684045778/zdc3pb1d0kgfwxuk8hch.jpg",
-      "facilities": { "bedrooms": 5, "parkings": 2, "bathrooms": 3 },
+      "facilities": { "bedrooms": 5, "parking": 2, "bathrooms": 3 },
       "userEmail": "ahmadrao925@gmail.com",
       "createdAt": { "$date": "2023-05-14T06:31:09.883Z" },
       "updatedAt": { "$date": "2023-05-14T06:31:09.883Z" }
@@ -260,7 +260,7 @@
       "city": "Mumbai",
       "country": "India",
       "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1686773421/ihdmmu9mjsors2rvlu4j.png",
-      "facilities": { "bedrooms": 5, "parkings": 5, "bathrooms": 8 },
+      "facilities": { "bedrooms": 5, "parking": 5, "bathrooms": 8 },
       "userEmail": "zain@gaintime.io",
       "createdAt": { "$date": "2023-06-14T20:11:01.081Z" },
       "updatedAt": { "$date": "2023-06-14T20:11:01.081Z" }

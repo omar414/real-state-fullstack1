@@ -1,5 +1,5 @@
 import { Container, Modal, Stepper } from '@mantine/core'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import AddLocation from '../AddLocation/AddLocation';
 import { useAuth0 } from '@auth0/auth0-react';
 import UploadImage from '../UploadImage/UploadImage';
@@ -21,12 +21,16 @@ const AddPropertyModal = ({opened,setOpened}) => {
         images: null,
         facilities: {
           bedrooms: 0,
-          parking: 0,
+          parkings: 0,
           bathrooms: 0,
         },
         userEmail: user?.email,
       });
-
+      useEffect(() => {
+        if (user?.email && user.email !== propertyDetails.userEmail) {
+          setPropertyDetails(prevDetails => ({ ...prevDetails, userEmail: user.email }));
+        }
+      }, [user]);
 
       const nextStep = () => {
         setActive((current) => (current < 4 ? current + 1 : current));
