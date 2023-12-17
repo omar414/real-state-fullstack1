@@ -4,7 +4,7 @@ import {toast} from 'react-toastify'
 
 
 export const api =axios.create({
-    baseURL:"http://localhost:8000/api"
+    baseURL:"https://real-state-server-5c65.onrender.com/api"
 })
 
 export const getAllProperties = async() => {
