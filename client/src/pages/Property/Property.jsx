@@ -89,7 +89,7 @@ const {user} = useAuth0()
               {/* parking */}
               <div className="flexStart facility">
                 <AiTwotoneCar size={20} color="#1F3E72" />
-                <span> {data?.facilities?.parkings} Parking/s</span>
+                <span> {data?.facilities?.parkings} Parking</span>
               </div>
               {/* rooms */}
               <div className="flexStart facility">

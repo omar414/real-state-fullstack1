@@ -17,23 +17,24 @@ const Facilities = ({
   const form = useForm({
     initialValues: {
       bedrooms: propertyDetails.facilities.bedrooms,
-      parkings: propertyDetails.facilities.parkings,
+      parking: propertyDetails.facilities.parking,
       bathrooms: propertyDetails.facilities.bathrooms,
     },
     validate: {
       bedrooms: (value) => (value < 1 ? "Must have atleast one room" : null),
-      bathrooms: (value) =>(value < 1 ? "Must have atleast one bathroom" : null),
+      bathrooms: (value) =>
+        value < 1 ? "Must have atleast one bathroom" : null,
     },
   });
 
-  const { bedrooms, parkings, bathrooms } = form.values;
+  const { bedrooms, parking, bathrooms } = form.values;
 
   const handleSubmit = () => {
     const { hasErrors } = form.validate();
     if (!hasErrors) {
       setPropertyDetails((prev) => ({
         ...prev,
-        facilities: { bedrooms, parkings, bathrooms },
+        facilities: { bedrooms, parking, bathrooms },
       }));
       mutate();
     }
@@ -48,7 +49,7 @@ const Facilities = ({
 
   const {mutate, isLoading} = useMutation({
     mutationFn: ()=> createResidency({
-        ...propertyDetails, facilities: {bedrooms, parkings , bathrooms},
+        ...propertyDetails, facilities: {bedrooms, parking , bathrooms},
     }, token),
     onError: ({ response }) => toast.error(response.data.message, {position: "bottom-right"}),
     onSettled: ()=> {
@@ -63,7 +64,7 @@ const Facilities = ({
         images: null,
         facilities: {
           bedrooms: 0,
-          parkings: 0,
+          parking: 0,
           bathrooms: 0,
         },
         userEmail: user?.email,
@@ -90,10 +91,9 @@ const Facilities = ({
           {...form.getInputProps("bedrooms")}
         />
         <NumberInput
-          withAsterisk
           label="No of Parkings"
           min={0}
-          {...form.getInputProps("parkings")}
+          {...form.getInputProps("parking")}
         />
         <NumberInput
           withAsterisk
