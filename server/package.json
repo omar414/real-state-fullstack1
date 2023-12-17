@@ -5,8 +5,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "postinstall": "prisma generate"
+    "start": "nodemon index.js"
+    
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.0",
