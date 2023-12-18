@@ -34,11 +34,11 @@ export const createResidency = asyncHandler(async (req, res) => {
     res.send({message: "Residency created successfully",residency})
   } catch (err) {
     if (err.code === "P2002") {
-      throw new Error("A residency with address already there");
+      return res.status(400).send({
+        message: "A residency with the provided address already exists."
+      });
     }
-    throw new Error(err.message);
-  }
-});
+}});
 //function to get all the docs from DB
 export  const getAllResidencies = asyncHandler(async(req,res) =>{
    try{ 
