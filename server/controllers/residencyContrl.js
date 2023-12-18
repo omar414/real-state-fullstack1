@@ -33,7 +33,7 @@ export const createResidency = asyncHandler(async (req, res) => {
 
     res.send({message: "Residency created successfully",residency})
   } catch (err) {
-    if (err.code === "P2002") {
+    if (err.code === address) {
       return res.status(400).send({
         message: "A residency with the provided address already exists."
       });
